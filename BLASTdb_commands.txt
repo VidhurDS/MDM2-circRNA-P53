@@ -1,0 +1,10 @@
+module load  ncbi-blast+/2.2.28
+makeblastdb -in /N/dc2/projects/CancerFight/Vidhur/circMDM2/sample_unmapped.fa -dbtype 'nucl' -out SampleDb
+mv SampleDb* /gpfs/home/s/w/swapdaul/BigRed2/blastdb
+//set db permissions to executable
+
+
+blastn -query /N/dc2/projects/CancerFight/Vidhur/circMDM2/in_sample.fa -db /gpfs/home/s/w/swapdaul/BigRed2/blastdb/SampleDb > sample_blast_out.txt
+
+
+cat /N/dc2/projects/CancerFight/Vidhur/circMDM2/30nt_BLAST_TCGA/final_fa_files/*.fa > TCGA_COAD_all_unmapped reads.fa

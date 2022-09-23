@@ -1,0 +1,16 @@
+
+$HOME/CIRCexplorer2 parse --pe -t TopHat-Fusion /N/dc2/projects/CancerFight/cghub_downloads/COAD_2016/00fb8fe0-38e4-492f-aa94-2e121e1f2e91/TCGA-AZ-6605-01A-11R-1839-07.bam > CIRCexplorer2_parse_TCGA-AZ-6605-01A-11R-1839-07.log
+CIRCexplorer2 parse --pe -t TopHat-Fusion /N/dc2/projects/CancerFight/cghub_downloads/COAD_2016/00fb8fe0-38e4-492f-aa94-2e121e1f2e91/TCGA-AZ-6605-01A-11R-1839-07.bam > CIRCexplorer2_parse_TCGA-AZ-6605-01A-11R-1839-07.log
+/gpfs/home/s/w/swapdaul/BigRed2/CIRCexplorer2/circ2/parse.py --pe -t TopHat-Fusion /N/dc2/projects/CancerFight/cghub_downloads/COAD_2016/00fb8fe0-38e4-492f-aa94-2e121e1f2e91/TCGA-AZ-6605-01A-11R-1839-07.bam > CIRCexplorer2_parse_TCGA-AZ-6605-01A-11R-1839-07.log
+
+
+
+CIRCexplorer2 parse --pe -t TopHat-Fusion /gpfs/home/s/w/swapdaul/BigRed2/CIRCexplorer2/test/data/tophat_fusion_PE.bam > CIRCexplorer2_parse_sample.log
+
+CIRCexplorer2 parse -t TopHat-Fusion /gpfs/home/s/w/swapdaul/BigRed2/CIRCexplorer2/test/data/tophat_fusion.bam > CIRCexplorer2_parse_sample.log
+
+CIRCexplorer2 parse -t TopHat-Fusion /N/dc2/projects/CancerFight/cghub_downloads/COAD_2016/00fb8fe0-38e4-492f-aa94-2e121e1f2e91/TCGA-AZ-6605-01A-11R-1839-07.bam > CIRCexplorer2_parse_TCGA-AZ-6605-01A-11R-1839-07.log
+
+CIRCexplorer2 annotate -r /gpfs/home/s/w/swapdaul/BigRed2/CIRCexplorer2/test/data/ref.txt -g /gpfs/home/s/w/swapdaul/BigRed2/CIRCexplorer2/test/data/chr21.fa -b back_spliced_junction.bed -o circularRNA_known.txt > CIRCexplorer2_annotate.log
+
+CIRCexplorer2 parse -t TopHat-Fusion /N/dc2/projects/CancerFight/Vidhur/sample_runs/test_run.unmapped.sam > CIRCexplorer2_parse_unmapped_sample_run.log

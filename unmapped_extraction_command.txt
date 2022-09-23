@@ -1,0 +1,13 @@
+samtools view -b -f 4 file.bam > unmapped.bam
+samtools view -b -F 4 file.bam > mapped.bam
+
+module load samtools
+
+samtools view -F 4 /N/dc2/projects/CancerFight/Vidhur/P53_alternative_splicing/hisat_alignment/alligned_GEO_bams/test_run.bam > test_run.mapped.sam
+samtools view -f 4 /N/dc2/projects/CancerFight/cghub_downloads/COAD_2016/ffb00cbb-c5c6-4514-aaad-6e725c7591af/TCGA-AA-3950-01A-02R-1022-07.bam > TCGA-AA-3950-01A-02R-1022-07.unmapped.sam
+
+
+samtools bam2fq input.bam | seqtk seq -A - > output.fa
+seqtk seq -A in.fq[.gz] > out.fa
+
+ awk '/>/{sub(">","&"FILENAME"||");sub(/\.fa/,x)}1' TCGA-AA-3950-01A-02R-1022-07.unmapped.fa > TCGA-AA-3950-01A-02R-1022-07_final_unmapped.fa
